@@ -3,8 +3,8 @@ let yourNumber
 let score = 20
 let highScore = 0
 document.querySelector('.check').addEventListener('click', function () {
-     yourNumber = document.querySelector('.guess').value
-    if(searchNumber == yourNumber){
+     yourNumber = Number(document.querySelector('.guess').value)
+    if(searchNumber === yourNumber){
 
         if(highScore < score){
             highScore = score
@@ -13,7 +13,7 @@ document.querySelector('.check').addEventListener('click', function () {
         document.querySelector('.message').textContent = 'Correct Number - You win'
         document.querySelector('body').style.backgroundColor = 'green'
 
-    }else if(score == 1){
+    }else if(score === 1){
 
         document.querySelector('.message').textContent = 'End Game You lost'
         document.querySelector('body').style.backgroundColor = 'red'
